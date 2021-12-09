@@ -6,9 +6,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-     <h2 th:text="${title}"></h2>
+
 </head>
 <body>
-
+<div th:each="entry : ${posts}" >
+    <h2 th:text="${title}"></h2>
+</div>
 </body>
 </html>
