@@ -17,17 +17,17 @@ public BlogController(PostRepository postRepository){
 }
 
       @RequestMapping("/")
-    public String listPosts(ModelMap modelmap){
+    public String listPosts(ModelMap modelMap){
     List<Post> posts = postRepository.getAllPosts();
     //    modelmap.put("title", "Blog Post 1");
-        modelmap.put("posts", posts);
+        modelMap.put("posts", posts);
 
         return "home";
     }
     @RequestMapping("/post/{id}")
     public String postDetails(@PathVariable Long id, ModelMap modelMap ){
 Post post = postRepository.findById(id);
-ModelMap.put("Post" post);
+modelMap.put("Post", post);
 
 return "post-details";
 
