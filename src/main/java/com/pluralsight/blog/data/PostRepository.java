@@ -12,7 +12,6 @@ import java.util.List;
 public class PostRepository {
 
 
-
     private final List<Post> ALL_POSTS = new ArrayList<>(Arrays.asList(
             new Post(1l, "Earbuds",
                     "You have got to try these in your ears. So tiny and can even block the sounds of screaming toddlers if you so desire.",
@@ -53,15 +52,15 @@ public class PostRepository {
     }
 
     public Post findById(Long id) {
-         Post result = null;
-        for (Post post:ALL_POSTS)
-              { if(post.getId()=id)
-                   result = post;
-                  break;
-            
+        Post result = null;
+        for (Post post: ALL_POSTS) {
+            if(post.getId() == id) {
+                result = post;
+                break;
+
+            }
+
         }
-
-return result;
-
+        return result;
     }
 }
