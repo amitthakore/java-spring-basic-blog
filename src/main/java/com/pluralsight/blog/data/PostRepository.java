@@ -11,11 +11,9 @@ import java.util.List;
 @Component
 public class PostRepository {
 
-
     public Post findById(Long id) {
         return null;
     }
-
 
     private final List<Post> ALL_POSTS = new ArrayList<>(Arrays.asList(
             new Post(1l, "Earbuds",

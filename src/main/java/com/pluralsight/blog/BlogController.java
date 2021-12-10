@@ -14,12 +14,12 @@ private PostRepository postRepository;
 public BlogController(PostRepository postRepository){
     this.postRepository = postRepository;
 }
-    @RequestMapping("/")
+
+      @RequestMapping("/")
     public String listPosts(ModelMap modelmap){
     List<Post> posts = postRepository.getAllPosts();
-        modelmap.put("title", "Blog Post 1");
+    //    modelmap.put("title", "Blog Post 1");
         modelmap.put("posts", posts);
-
 
         return "home";
     }
